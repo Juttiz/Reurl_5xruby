@@ -1,3 +1,0 @@
-class ReurlsController < ApplicationController
-    
-end
