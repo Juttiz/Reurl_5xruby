@@ -1,0 +1,2 @@
+class Reurl < ApplicationRecord
+end

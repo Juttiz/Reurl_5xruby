@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  originUrl: MyText
+  token: MyString
+
+two:
+  originUrl: MyText
+  token: MyString
