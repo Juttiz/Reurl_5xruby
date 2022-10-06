@@ -1,6 +1,8 @@
-<%= form_with url:"/newurl" do |form| %> 
-    連結：
-    <%= form.text_field :originUrl %>
-    <br>
-    <%= form.submit %>
-<% end %>
+
+ <div class="form">
+    <%= form_with url:"/newurl" do |form| %> 
+        <%= form.text_field :originUrl, :size => 60, placeholder: "paste your url here" %>
+        <br>
+        <%= form.submit "generate", class: "submit-button"%>
+    <% end %>
+</div> 

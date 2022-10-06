@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+    <div class="flash">
+      <%= notice %>
+    </div>
+    <div class="box">
+      <h2>Url Shortener</h2>
+      <%= yield %>
+    </div>
+  </div>
   </body>
 </html>

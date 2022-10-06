@@ -11,3 +11,10 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+const urlElement = Document.getElementById('url')
+urlElement.addEventListener('input', (e)=>{
+    console.log(e)
+})
+
+import "controllers"
