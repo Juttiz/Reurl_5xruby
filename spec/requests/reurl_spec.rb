@@ -5,7 +5,7 @@ RSpec.describe "Reurls", type: :request do
 
     it "generate new url if the given url is eligible" do
         post "/newurl", :params => { :originUrl => "https://www.google.com" }
-        expect(assigns(:reurl)).to eq("http://localhost:3000/00000a")
+        expect(assigns(:reurl)).to eq("http://www.example.com/00000a")
     end
 
     it "prevent SQL injection" do

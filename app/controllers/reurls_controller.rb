@@ -7,7 +7,7 @@ class ReurlsController < ApplicationController
   end
 
   def newurl
-    receivedUrl = params[:originUrl]
+    receivedUrl = received[:originUrl]
     verifyResult = verifyUrl(receivedUrl)
     if verifyResult > 0
       newurlItem = Reurl.create(originUrl: receivedUrl)
@@ -20,10 +20,16 @@ class ReurlsController < ApplicationController
   end
 
   def redirect
-    redirectUrlItem = Reurl.find_by(token: params[:token])
+    redirectUrlItem = Reurl.find_by(token: received[:token])
+    p redirectUrlItem
     redirect_to redirectUrlItem ? redirectUrlItem.originUrl : "/"
   end
+  
   private
+  
+  def received
+    params.permit(:originUrl, :token)
+  end
 
   def map
     @map = ["0", *?a..?z, *?1..?9, *?A..?Z, "_", "-"]
