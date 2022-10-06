@@ -25,7 +25,7 @@ RSpec.describe "Reurls", type: :request do
   end
   describe "redirect url" do
     it "redirect to url" do
-      get "/00000o"
+      get "/00000a"
       expect(response).to redirect_to("https://www.google.com")
     end
     it "alert to non-existent url"

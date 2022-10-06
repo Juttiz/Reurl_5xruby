@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   get "/", to: "reurls#index"
   get '/:token', to: "reurls#redirect"
   post "/newurl", to: "reurls#newurl"
-  get "*", to: "reurls#index"
 end
