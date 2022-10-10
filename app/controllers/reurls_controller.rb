@@ -21,8 +21,7 @@ class ReurlsController < ApplicationController
 
   def redirect
     redirectUrlItem = Reurl.find_by(token: received[:token])
-    p redirectUrlItem
-    redirect_to redirectUrlItem ? redirectUrlItem.originUrl : "/"
+    redirect_to redirectUrlItem ? redirectUrlItem.originUrl : "/", notice: "unknown url"
   end
   
   private
